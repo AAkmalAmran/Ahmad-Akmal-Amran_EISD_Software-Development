@@ -3,7 +3,7 @@ function hitung(rating){
     const rating_tertinggi = Math.max(...rating);
 
     const total = rating.reduce((acc, val) => acc + val, 0);
-    const rata_rata = total / rating.length;
+    const rata_rata = Math.round((total / rating.length) * 100) / 100; // Pembulatan dua angka di belakang koma
 
     hasil = [rating_terendah, rating_tertinggi, rata_rata];
     return hasil;
